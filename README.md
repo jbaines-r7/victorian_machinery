@@ -8,6 +8,10 @@ Victorian Machinery is a proof of concept exploit for CVE-2022-30525. The vulner
 
 At the time of writing, there were more than [16,000](https://www.shodan.io/search?query=title%3A%22USG+FLEX+100%22%2C%22USG+FLEX+100w%22%2C%22USG+FLEX+200%22%2C%22USG+FLEX+500%22%2C%22USG+FLEX+700%22%2C%22USG+FLEX+50%22%2C%22USG+FLEX+50w%22%2C%22ATP100%22%2C%22ATP200%22%2C%22ATP500%22%2C%22ATP700%22) affected devices visible on Shodan. Exposing the management web interface *is not* the default setting, which implies there are many more affected systems not exposed to the internet. These systems also support automatic update (not enabled by default) so a good subset are already patched against this issue.
 
+## PoC Video
+
+https://youtu.be/x8Vzq9tm47c
+
 ## Options
 
 Victorian Machinery expliots the target and catches a reverse shell using a forked `nc` listener. This was tested on Ubuntu 20.04. The PoC tries to execute `/usr/bin/nc` by default. If your `nc` is somewhere else than you'll need to update the `nc-path` option. See the complete help menu below:
